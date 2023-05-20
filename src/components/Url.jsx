@@ -63,11 +63,14 @@ const UrlShortener = () => {
   const originalUrlClass = 'text-black';
 
   return (
-    <div name="Url" className="flex flex-col items-center justify-center h-screen bg-[#83b78f] text-[#001e1d]">
+    <div
+      name="Url"
+      className="flex h-screen flex-col items-center justify-center bg-[#83b78f] text-[#001e1d]"
+    >
       <h1 className={headerClass}>URL Shortener</h1>
       {shortUrl ? (
-        <div className="mx-auto max-w-md flex flex-col items-center">
-          <p className="text-center mb-4 text-2xl">Original URL:</p>
+        <div className="mx-auto flex max-w-md flex-col items-center">
+          <p className="mb-4 text-center text-2xl">Original URL:</p>
           <a
             href={longUrl}
             target="_blank"
@@ -76,7 +79,7 @@ const UrlShortener = () => {
           >
             {longUrl}
           </a>
-          <p className="text-center mt-4 mb-4 text-2xl">Shortened URL:</p>
+          <p className="mb-4 mt-4 text-center text-2xl">Shortened URL:</p>
           <a
             href={shortUrl}
             target="_blank"
@@ -93,7 +96,7 @@ const UrlShortener = () => {
           </button>
         </div>
       ) : (
-        <div className="mx-auto max-w-md flex flex-col items-center">
+        <div className="mx-auto flex max-w-md flex-col items-center">
           <input
             type="text"
             className={inputClass}

@@ -7,11 +7,9 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div
-      className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#577590] text-[#fffffe]"
-    >
+    <div className="fixed flex h-[80px] w-full items-center justify-between bg-[#577590] px-4 text-[#fffffe]">
       <div>
-        <h1 className="font-bold text-xl cursor-pointer mb-2 lg:mb-0">
+        <h1 className="mb-2 cursor-pointer text-xl font-bold lg:mb-0">
           <Link to="home" smooth={true} duration={500}>
             WebTools.io
           </Link>
@@ -20,18 +18,18 @@ const Navbar = () => {
 
       {/* Navbar */}
       <ul className="hidden md:flex">
-        <li className="hover:scale-105 cursor-pointer px-4">
+        <li className="cursor-pointer px-4 hover:scale-105">
           <Link to="QR" smooth={true} duration={500}>
             QR Code Generator
           </Link>
         </li>
 
-        <li className="hover:scale-110 px-4 cursor-pointer">
+        <li className="cursor-pointer px-4 hover:scale-110">
           <Link to="Url" smooth={true} duration={500}>
             URL Shortener
           </Link>
         </li>
-        <li className="hover:scale-105 px-4 cursor-pointer">
+        <li className="cursor-pointer px-4 hover:scale-105">
           <Link to="Img" smooth={true} duration={500}>
             Stock Image Finder
           </Link>
@@ -39,7 +37,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger Menu */}
-      <div onClick={handleClick} className="md:hidden z-10 text-[#03071e]">
+      <div onClick={handleClick} className="z-10 text-[#03071e] md:hidden">
         {!nav ? (
           <button className="hamburger hamburger-vortex" type="button">
             <span className="hamburger-box">
@@ -63,20 +61,20 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#577590] text-[#fffffe] flex flex-col justify-center items-center'
+            : 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-[#577590] text-[#fffffe]'
         }
       >
-        <li className="py-6 text-4xl hover:scale-110 cursor-pointer transform transition">
+        <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
           <Link to="QR" smooth={true} duration={500} onClick={handleClick}>
             QR Code Generator
           </Link>
         </li>
-        <li className="py-6 text-4xl hover:scale-110 cursor-pointer transform transition">
+        <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
           <Link to="Url" smooth={true} duration={500} onClick={handleClick}>
             URL Shortener
           </Link>
         </li>
-        <li className="py-6 text-4xl hover:scale-110 cursor-pointer transform transition">
+        <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
           <Link to="Img" smooth={true} duration={500} onClick={handleClick}>
             Stock Image Finder
           </Link>

@@ -8,7 +8,9 @@ const ImgFinder = () => {
   const searchImages = async () => {
     try {
       const response = await axios.get(
-        `https://pixabay.com/api/?key=${import.meta.env.VITE_PIXABAY_API_KEY}&q=${input}&image_type=photo`
+        `https://pixabay.com/api/?key=${
+          import.meta.env.VITE_PIXABAY_API_KEY
+        }&q=${input}&image_type=photo`
       );
       const images = response.data.hits;
       if (images.length > 0) {
@@ -22,33 +24,37 @@ const ImgFinder = () => {
     }
   };
 
+  const inputClass = 'border-2 border-gray-300 rounded-lg p-2 mb-4';
+  const headerClass =
+    'font-bold text-5xl lg:text-6xl py-12 lg:py-24 text-center';
+  const searchButtonClass =
+    'hover:scale-105 bg-[#577590] text-[#fffffe] text-white font-bold py-2 px-4 rounded transition-all duration-200';
+
   return (
-    <div name="Img" className="flex flex-col items-center justify-center w-full h-screen bg-[#EBEBEB] text-[#001e1d]">
-      <h1 className="font-bold text-5xl lg:text-6xl py-12 lg:py-12 text-center">
-        Stock Image Finder
-      </h1>
-      <div className="search-bar flex flex-col items-center justify-center mb-8">
+    <div
+      name="Img"
+      className="flex h-screen w-full flex-col items-center justify-center bg-[#EBEBEB] text-[#001e1d]"
+    >
+      <h1 className={headerClass}>Stock Image Finder</h1>
+      <div className="search-bar mb-8 flex flex-col items-center justify-center">
         <input
           type="text"
           placeholder="Search images..."
           onChange={(e) => setInput(e.target.value)}
           value={input}
-          className="border-2 border-gray-300 rounded-lg p-2 mb-4"
+          className={inputClass}
         />
-        <button
-          onClick={searchImages}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
+        <button onClick={searchImages} className={searchButtonClass}>
           Search
         </button>
       </div>
       <div className="image-results">
         {images[0] && (
-          <div className="image-item w-full h-64 flex items-center justify-center">
+          <div className="image-item flex h-64 w-full items-center justify-center">
             <img
               src={images[0].webformatURL}
               alt={images[0].tags}
-              className="object-contain max-w-full max-h-full"
+              className="max-h-full max-w-full object-contain"
             />
           </div>
         )}

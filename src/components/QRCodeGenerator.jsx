@@ -33,7 +33,7 @@ const QRCodeGenerator = () => {
 
   const ColorButton = ({ color, className, onClick }) => (
     <button
-      className={`w-8 h-8 rounded-full ${className} hover:scale-105`}
+      className={`h-8 w-8 rounded-full ${className} hover:scale-105`}
       onClick={() => handleColorChange(color)}
       style={{ backgroundColor: color }}
     />
@@ -41,13 +41,18 @@ const QRCodeGenerator = () => {
 
   const inputClass =
     'w-full px-4 py-2 rounded-md mb-4 text-lg placeholder-gray-500 placeholder-opacity-75';
-  const headerClass = 'text-center font-bold py-8 lg:py-24 text-5xl lg:text-6xl';
-  const downloadButtonClass = 'bg-[#001e1d] text-[#fffffe] hover:scale-105 py-2 px-4 rounded-md';
+  const headerClass =
+    'text-center font-bold py-8 lg:py-24 text-5xl lg:text-6xl';
+  const downloadButtonClass =
+    'bg-[#001e1d] text-[#fffffe] hover:scale-105 py-2 px-4 rounded-md';
 
   return (
-    <div name='QR' className="flex flex-col items-center justify-center h-screen bg-[#94a3b5] text-[#001e1d]">
+    <div
+      name="QR"
+      className="flex h-screen flex-col items-center justify-center bg-[#94a3b5] text-[#001e1d]"
+    >
       <h1 className={headerClass}>QR Code Generator</h1>
-      <div className="mx-auto max-w-md flex flex-col items-center">
+      <div className="mx-auto flex max-w-md flex-col items-center">
         <input
           type="text"
           className={inputClass}
@@ -55,7 +60,7 @@ const QRCodeGenerator = () => {
           value={qrValue}
           onChange={handleInputChange}
         />
-        <div className="py-4 flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 py-4">
           {colorButtons.map((button) => (
             <ColorButton
               key={button.color}
@@ -70,7 +75,7 @@ const QRCodeGenerator = () => {
           </div>
         )}
         {qrValue && (
-          <div className="py-4 flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4 py-4">
             <button className={downloadButtonClass} onClick={handleDownload}>
               Download
             </button>
