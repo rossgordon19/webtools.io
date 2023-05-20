@@ -7,7 +7,7 @@ const ImgFinder = () => {
 
   const searchImages = async () => {
     try {
-      const response = await axios.get(`https://pixabay.com/api/?key=36597838-481bfb285eec5668033b11f7e&q=${input}&image_type=photo`);
+      const response = await axios.get(`https://pixabay.com/api/?key=${import.meta.env.VITE_PIXABAY_API_KEY}&q=${input}&image_type=photo`);
       const images = response.data.hits;
       if (images.length > 0) {
         const randomImage = images[Math.floor(Math.random() * images.length)];
