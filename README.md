@@ -18,12 +18,16 @@ Before you begin, ensure you have the following installed on your local machine:
 
 1. Clone the repository to your local machine: [https://github.com/rossgordon19/webtools.io.git]
 
+2. Install the project dependencies:
 
-2. Install the project dependencies: npm install
+   ```bash
+   npm install
+   ```
 
-
-3. Start the development server: npm run dev
-
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
 Your application should now be running on local host.
 
@@ -54,4 +58,5 @@ The Stock Image Finder feature allows users to search for stock images using the
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
->>>>>>> 5b7f940 (Rough draft complete. Needs styling)
+
+> > > > > > > 5b7f940 (Rough draft complete. Needs styling)
