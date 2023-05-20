@@ -45,6 +45,8 @@ The URL Shortener feature provides a way to shorten long URLs. It uses the `is.g
 
 The Stock Image Finder feature allows users to search for stock images using the Pixabay API. The tool will display a randomly chosen image from the search results.
 
+To avoid sharing my API key, I created a Netlify Environmental Variable, and stored my key in a .env file.
+
 ## Built With
 
 - [React.js](https://reactjs.org) - The web framework used
