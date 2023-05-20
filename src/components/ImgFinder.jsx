@@ -22,7 +22,7 @@ const ImgFinder = () => {
 
   return (
     <div name="Img" className="flex flex-col items-center justify-center w-full h-screen bg-[#EBEBEB] text-[#001e1d]">
-      <h1 className="font-bold text-5xl lg:text-6xl py-24">
+      <h1 className="font-bold text-5xl lg:text-6xl py-12 lg:py-24 text-center">
         Stock Image Finder
       </h1>
       <div className="search-bar flex items-center justify-center mb-8">
