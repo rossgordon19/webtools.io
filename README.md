@@ -58,5 +58,3 @@ The Stock Image Finder feature allows users to search for stock images using the
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-> > > > > > > 5b7f940 (Rough draft complete. Needs styling)
