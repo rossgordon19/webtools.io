@@ -7,7 +7,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed flex h-[80px] w-full items-center justify-between bg-[#577590] px-4 text-[#fffffe]">
+    <div className="fixed flex h-[80px] w-full items-center justify-between bg-[#243447] px-4 text-[#fffffe]">
       <div>
         <h1 className="mb-2 cursor-pointer text-xl font-bold lg:mb-0">
           <Link to="home" smooth={true} duration={500}>
@@ -19,6 +19,11 @@ const Navbar = () => {
       {/* Navbar */}
       <ul className="hidden md:flex">
         <li className="cursor-pointer px-4 hover:scale-105">
+          <Link to="Img" smooth={true} duration={500}>
+            DALL•E Image Generator
+          </Link>
+        </li>
+        <li className="cursor-pointer px-4 hover:scale-105">
           <Link to="QR" smooth={true} duration={500}>
             QR Code Generator
           </Link>
@@ -27,11 +32,6 @@ const Navbar = () => {
         <li className="cursor-pointer px-4 hover:scale-110">
           <Link to="Url" smooth={true} duration={500}>
             URL Shortener
-          </Link>
-        </li>
-        <li className="cursor-pointer px-4 hover:scale-105">
-          <Link to="Img" smooth={true} duration={500}>
-            Stock Image Finder
           </Link>
         </li>
       </ul>
@@ -61,9 +61,14 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-[#577590] text-[#fffffe]'
+            : 'absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-[#243447] text-[#fffffe]'
         }
       >
+        <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
+          <Link to="Img" smooth={true} duration={500} onClick={handleClick}>
+            DALL•E Image Generator
+          </Link>
+        </li>
         <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
           <Link to="QR" smooth={true} duration={500} onClick={handleClick}>
             QR Code Generator
@@ -72,11 +77,6 @@ const Navbar = () => {
         <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
           <Link to="Url" smooth={true} duration={500} onClick={handleClick}>
             URL Shortener
-          </Link>
-        </li>
-        <li className="transform cursor-pointer py-6 text-4xl transition hover:scale-110">
-          <Link to="Img" smooth={true} duration={500} onClick={handleClick}>
-            Stock Image Finder
           </Link>
         </li>
       </ul>

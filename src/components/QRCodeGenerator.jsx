@@ -49,7 +49,7 @@ const QRCodeGenerator = () => {
   return (
     <div
       name="QR"
-      className="flex h-screen flex-col items-center justify-center bg-[#94a3b5] text-[#001e1d]"
+      className="flex h-screen flex-col items-center justify-center bg-[#FF7F50] text-[#001e1d]"
     >
       <h1 className={headerClass}>QR Code Generator</h1>
       <div className="mx-auto flex max-w-md flex-col items-center">

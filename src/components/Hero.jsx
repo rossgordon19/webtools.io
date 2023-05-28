@@ -7,7 +7,7 @@ const Hero = () => {
   const { scrollY } = useViewportScroll();
   const opacity = useTransform(scrollY, [0, 100], [1, 0]);
   return (
-    <div name="home" className="h-screen w-full bg-[#577590] text-[#fffffe]">
+    <div name="home" className="h-screen w-full bg-[#243447] text-[#fffffe]">
       {/* Container */}
       <div className="mx-auto flex h-full max-w-[1000px] flex-col justify-center px-8">
         <motion.h1

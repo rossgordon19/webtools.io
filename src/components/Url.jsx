@@ -21,13 +21,12 @@ const UrlShortener = () => {
       if (response.ok) {
         const data = await response.json();
         setShortUrl(data.shorturl);
-        setIsCopied(false); // Reset the copied status here
+        setIsCopied(false);
       } else {
         throw new Error('Failed to shorten URL');
       }
     } catch (error) {
       console.error('Error shortening URL:', error.message);
-      // Handle error condition, such as displaying an error message to the user
     }
   };
 
@@ -36,7 +35,7 @@ const UrlShortener = () => {
       .writeText(shortUrl)
       .then(() => {
         console.log('URL copied to clipboard');
-        setIsCopied(true); // Set the copied status when the URL is copied
+        setIsCopied(true);
       })
       .catch((error) => {
         console.error('Error copying URL to clipboard:', error);
@@ -65,7 +64,7 @@ const UrlShortener = () => {
   return (
     <div
       name="Url"
-      className="flex h-screen flex-col items-center justify-center bg-[#83b78f] text-[#001e1d]"
+      className="flex h-screen flex-col items-center justify-center bg-[#B0A8B9] text-[#001e1d]"
     >
       <h1 className={headerClass}>URL Shortener</h1>
       {shortUrl ? (
