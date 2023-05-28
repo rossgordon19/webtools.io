@@ -41,9 +41,9 @@ This feature allows users to generate QR codes for any input string, primarily U
 
 The URL Shortener feature provides a way to shorten long URLs. It uses the `is.gd` URL shortening service. Users can copy the shortened URL to the clipboard with a single click and can clear the input and start over with another URL.
 
-### Stock Image Finder
+### OpenAI DALL•E 2 API
 
-The Stock Image Finder feature allows users to search for stock images using the Pixabay API. The tool will display a randomly chosen image from the search results.
+DALL·E 2 API is an advanced image generation model that combines the capabilities of natural language processing and computer vision to generate highly detailed and contextually relevant images from textual descriptions.
 
 To avoid sharing my API key, I created a Netlify Environmental Variable, and stored my key in a .env file.
 
@@ -54,8 +54,8 @@ To avoid sharing my API key, I created a Netlify Environmental Variable, and sto
 - [Tailwind CSS](https://tailwindcss.com/) - For styling
 - [Framer Motion](https://www.framer.com/api/motion/) - For animations
 - [React Scroll](https://www.npmjs.com/package/react-scroll) - For smooth scrolling effects
-- [Pixabay API](https://pixabay.com/service/about/api/) - Used to fetch stock images
 - [is.gd API](https://is.gd/developers.php) - Used for URL shortening
+- [DALL·E API ](https://openai.com/blog/dall-e-api-now-available-in-public-beta) - DALL•E 2 API
 
 ## License
 
