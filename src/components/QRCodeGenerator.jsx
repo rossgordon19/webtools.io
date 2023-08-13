@@ -40,7 +40,7 @@ const QRCodeGenerator = () => {
   );
 
   const inputClass =
-    'w-full px-4 py-2 rounded-md mb-4 text-lg placeholder-gray-500 placeholder-opacity-75';
+    'w-full text-center px-4 py-2 rounded-md mb-4 text-lg placeholder-gray-500 placeholder-opacity-75';
   const headerClass =
     'text-center font-bold py-8 lg:py-24 text-5xl lg:text-6xl';
   const downloadButtonClass =
@@ -49,7 +49,7 @@ const QRCodeGenerator = () => {
   return (
     <div
       name="QR"
-      className="flex h-screen flex-col items-center justify-center bg-[#FF7F50] text-[#001e1d]"
+      className="flex h-screen flex-col items-center justify-center bg-[#129490] text-white"
     >
       <h1 className={headerClass}>QR Code Generator</h1>
       <div className="mx-auto flex max-w-md flex-col items-center">
