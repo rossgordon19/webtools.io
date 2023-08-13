@@ -49,7 +49,7 @@ const ImgGenerator = () => {
   return (
     <div
       name="Img"
-      className="flex h-[120vh] flex-col items-center justify-center bg-[#89CFF0] text-[#001e1d]"
+      className="flex h-[120vh] flex-col items-center justify-center bg-[#065143] text-white"
     >
       {loading ? (
         <>

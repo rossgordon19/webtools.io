@@ -49,7 +49,7 @@ const UrlShortener = () => {
   };
 
   const inputClass =
-    'w-full px-4 py-2 rounded-md mb-4 text-lg placeholder-gray-500 placeholder-opacity-75';
+    'w-full text-center px-4 py-2 rounded-md mb-4 text-lg placeholder-gray-500 placeholder-opacity-75';
   const headerClass =
     'text-center font-bold py-8 lg:py-24 text-5xl lg:text-6xl';
   const downloadButtonClass =
@@ -64,7 +64,7 @@ const UrlShortener = () => {
   return (
     <div
       name="Url"
-      className="flex h-screen flex-col items-center justify-center bg-[#B0A8B9] text-[#001e1d]"
+      className="flex h-screen flex-col items-center justify-center bg-[#70B77E] text-[#001e1d]"
     >
       <h1 className={headerClass}>URL Shortener</h1>
       {shortUrl ? (
