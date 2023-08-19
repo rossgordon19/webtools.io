@@ -61,7 +61,7 @@ const ImgGenerator = () => {
       ) : (
         <>
           <h1 className={headerClass}>DALL•E Image Generator</h1>
-          <div className="mx-auto flex max-w-md flex-col items-center">
+          <div className="mx-auto flex max-w-md flex-col items-center text-black">
             <input
               type="text"
               className={inputClass}
